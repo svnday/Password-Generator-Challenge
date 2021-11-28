@@ -101,6 +101,7 @@ generatePassword = function(length, hasUppercase, hasLowercase, hasSymbols, hasN
       generatedPassword += passwordOptions[optionsName]();
     });
   }
+  
   const finalPassword = generatedPassword.slice(0, length);
 
 }
