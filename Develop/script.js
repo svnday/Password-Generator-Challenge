@@ -80,33 +80,9 @@ passwordNumbers = function() {
 }
 
 generatePassword = function(length, hasUppercase, hasLowercase, hasSymbols, hasNumbers) {
-  if (!hasUppercase && !hasLowercase && !hasSymbols && !hasNumbers) return 'Invalid Paramers';
-  var generatedPassword = '';
-  const optionsCount = hasUppercase + hasLowercase + hasSymbols + hasNumbers;
-  const optionsArray = [{length}, {hasUppercase}, {hasLowercase}, {hasSymbols}, {hasNumbers}].filter
-  (
-    item => Object.values(item)[0]
-  )
-
-
-  if (optionsCount === 0) {
-    return '';
-  }
-
-  for(let i = 0; i < passwordOptions.length; i += optionsCount){
-    optionsArray.forEach(option => {
-      const optionsName = Object.keys(option) [0];
-
-      console.log('optionsName', optionsName);
-      generatedPassword += passwordOptions[optionsName]();
-    });
-  }
-  
-  const finalPassword = generatedPassword.slice(0, length);
+  var generatedPassword = ''
 
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
